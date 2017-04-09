@@ -16,6 +16,10 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     markdown
+     yaml
+     (haskell :variables haskell-completion-backend 'intero)
+     lua
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -25,22 +29,24 @@ values."
       :variables
       auto-completion-tab-key-behavior 'complete)
      better-defaults
+     coq
      dash
      emacs-lisp
      evil-commentary
      (evil-snipe
       :variables
       evil-snipe-enable-alternate-f-and-t-behaviors t)
-     unimpaired
      git
      latex
      ocaml
      ;; markdown
-     ;; org
+     ;; or
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     spell-checking
+     (spell-checking :variables
+                     spell-checking-enable-auto-dictionary t
+                     ispell-dictionary "english")
      syntax-checking
      semantic
      version-control
@@ -83,18 +89,8 @@ values."
    ;; One of `vim', `emacs' or `hybrid'. Evil is always enabled but if the
    ;; variable is `emacs' then the `holy-mode' is enabled at startup. `hybrid'
    ;; uses emacs key bindings for vim's insert mode, but otherwise leaves evil
-   ;; unchanged. (default 'vim)
    dotspacemacs-editing-style
    'hybrid
-   ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
-   dotspacemacs-verbose-loading
-   nil
-   ;; Specify the startup banner. Default value is `official', it displays
-   ;; the official spacemacs logo. An integer value is the index of text
-   ;; banner, `random' chooses a random text banner in `core/banners'
-   ;; directory. A string value must be a path to an image format supported
-   ;; by your Emacs build.
-   ;; If the value is nil then no banner is displayed. (default 'official)
    dotspacemacs-startup-banner
    'official
    ;; List of items to show in the startup buffer. If nil it is disabled.
@@ -315,6 +311,13 @@ layers configuration. You are free to put any user code."
   ;; Also in visual mode
   (define-key evil-visual-state-map "j" 'evil-next-visual-line)
   (define-key evil-visual-state-map "k" 'evil-previous-visual-line)
+
+  (setq load-path (cons "/Applications/Singular.app/Contents/share/singular/emacs/" load-path))
+  (autoload 'singular "singular"
+    "Start Singular using default values." t)
+  (autoload 'singular-other "singular"
+    "Ask for arguments and start Singular." t)
+  (put 'company-coq-fold 'disabled nil)
   )
 
 
@@ -325,6 +328,9 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (proof-general company-coq company-math math-symbol-lists mmm-mode markdown-toc markdown-mode gh-md yaml-mode intero hlint-refactor hindent helm-hoogle haskell-snippets flycheck-haskell company-ghci company-ghc ghc haskell-mode company-cabal cmm-mode lua-mode ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen utop use-package tuareg toc-org stickyfunc-enhance srefactor spacemacs-theme spaceline smeargle restart-emacs rainbow-delimiters quelpa popwin persp-mode pcre2el paradox orgit org-plus-contrib org-bullets open-junk-file ocp-indent neotree mwim move-text merlin magit-gitflow macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-dash helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ flyspell-correct-helm flycheck-pos-tip flx-ido flatland-theme fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-snipe evil-search-highlight-persist evil-numbers evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-commentary evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diff-hl define-word dash-at-point company-statistics company-auctex column-enforce-mode clean-aindent-mode auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile auctex-latexmk aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
  '(paradox-github-token t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
