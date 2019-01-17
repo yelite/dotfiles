@@ -1,0 +1,29 @@
+export DOTFILES="$HOME/.dotfiles"
+
+function antibody-reload() {
+    antibody bundle < $DOTFILES/zsh/zsh_plugins > $HOME/.zsh_plugins.sh
+}
+
+source ~/.zsh_plugins.sh
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle :compinstall filename '/Users/lye/.zshrc'
+
+autoload -Uz compinit
+compinit -i
+# End of lines added by compinstall
+
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+export PURE_CMD_MAX_EXEC_TIME=10
+
+alias ll="exa -l"
+alias la="exa -a"
+alias ls="exa"
+
+source $DOTFILES/zsh/git-aliases.zsh

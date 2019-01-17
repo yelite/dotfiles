@@ -1,0 +1,20 @@
+chrissicool/zsh-256color
+Tarrasch/zsh-bd
+rupa/z
+
+leophys/zsh-plugin-fzf-finder
+changyuheng/fz
+
+wfxr/forgit
+
+thetic/extract
+srijanshetty/zsh-pip-completion
+sinetoami/antibody-completion kind:fpath
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
+mafredri/zsh-async
+
+sindresorhus/pure
+zdharma/fast-syntax-highlighting
+zsh-users/zsh-history-substring-search
