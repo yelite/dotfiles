@@ -26,6 +26,8 @@ alias ll="exa -l"
 alias la="exa -a"
 alias ls="exa"
 
+alias vi="nvim"
+
 source $DOTFILES/zsh/git-aliases.zsh
 
 HISTFILE="$HOME/.zsh_history"
