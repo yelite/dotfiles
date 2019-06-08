@@ -6,6 +6,7 @@ leophys/zsh-plugin-fzf-finder
 changyuheng/fz
 
 wfxr/forgit
+owenstranathan/pipenv.zsh
 
 thetic/extract
 srijanshetty/zsh-pip-completion
