@@ -4,6 +4,8 @@ function antibody-reload() {
     antibody bundle < $DOTFILES/zsh/zsh_plugins > $HOME/.zsh_plugins.sh
 }
 
+fpath+=~/.zfunc
+
 source ~/.zsh_plugins.sh
 
 # The following lines were added by compinstall
