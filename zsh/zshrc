@@ -8,13 +8,9 @@ fpath+=~/.zfunc
 
 source ~/.zsh_plugins.sh
 
-# The following lines were added by compinstall
-
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle :compinstall filename '/Users/lye/.zshrc'
 
-autoload -Uz compinit
-compinit -i
 # End of lines added by compinstall
 
 bindkey -M emacs '^P' history-substring-search-up
