@@ -55,3 +55,19 @@ let g:netrw_localrmdir='rm -r'
 
 "toggle netrw on the left side of the editor
 nnoremap <leader>n :Lexplore<CR>
+
+noremap! <C-b> <Left>
+noremap! <C-f> <Right>
+noremap! <C-e> <End>
+noremap! <C-p> <Up>
+noremap! <C-n> <Down>
+
+imap <C-a> <C-o>^
+cmap <C-a> <Home>
+
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab

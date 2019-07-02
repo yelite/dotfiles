@@ -5,3 +5,42 @@ set commentary
 set multiple-cursors
 
 set smartjoin
+
+:nmap <C-Q> :action Back<CR>
+:nmap <C-W> :action Forward<CR>
+
+:map s :action EditorSelectWord<CR>
+:map S :action EditorUnSelectWord<CR>
+
+let mapleader=" "
+
+"version control
+:nmap <leader>vv :action Vcs.QuickListPopupAction<CR>
+:nmap <leader>vp :action Vcs.Push<CR>
+:nmap <leader>vu :action Vcs.UpdateProject<CR>
+:nmap <leader>vk :action CheckinProject<CR>
+:nmap <leader>vz :action ChangesView.Revert<CR>
+:nmap <leader>vh :action Vcs.ShowTabbedFileHistory<CR>
+:nmap <leader>vb :action Annotate<CR>
+
+"windows management
+:nmap <leader><TAB> :action Switcher<CR>
+:nmap <leader>1 :action GoToTab1<CR>
+:nmap <leader>2 :action GoToTab2<CR>
+:nmap <leader>3 :action GoToTab3<CR>
+:nmap <leader>4 :action GoToTab4<CR>
+
+:nmap <leader>ww :action VimWindowNext<CR>
+:nmap <leader>wv :action VimWindowSplitVertical<CR>
+:nmap <leader>w- :action VimWindowSplitHorizontal<CR>
+:nmap <leader>wh :action VimWindowLeft<CR>
+:nmap <leader>wj :action VimWindowDown<CR>
+:nmap <leader>wk :action VimWindowUp<CR>
+:nmap <leader>wl :action VimWindowRight<CR>
+:nmap <leader>wL :action MoveTabRight<CR>
+:nmap <leader>wJ :action MoveTabDown<CR>
+:nmap <leader>wp :action PinActiveTab<CR>
+:nmap <leader>wo :action MoveEditorToOppositeTabGroup<CR>
+:nmap <leader>wO :action OpenEditorInOppositeTabGroup<CR>
+:nmap <leader>wd :action VimWindowClose<CR>
+
