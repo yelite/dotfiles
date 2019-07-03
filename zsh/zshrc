@@ -18,7 +18,12 @@ zle -N bracketed-paste bracketed-paste-magic
 autoload -Uz compinit
 compinit -i
 
-# End of lines added by compinstall
+# Enable Ctrl-x-e to edit command line
+autoload -Uz edit-command-line
+# Emacs style
+zle -N edit-command-line
+bindkey '^xe' edit-command-line
+bindkey '^x^e' edit-command-line
 
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
