@@ -54,6 +54,7 @@ map <leader>] :action EditorCodeBlockEnd<CR>
 "code intelligence
 nmap <leader>ii :action ImplementMethods<CR>
 nmap <leader>io :action OverrideMethods<CR>
+nmap <leader>iO :action OptimizeImports<CR>
 nmap <leader>ir :action RenameElement<CR>
 nmap <leader>is :action ChangeSignature<CR>
 vmap <leader>ie :action ExtractMethod<CR>
