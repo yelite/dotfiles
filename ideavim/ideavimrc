@@ -23,7 +23,8 @@ nmap <leader>vu :action Vcs.UpdateProject<CR>
 nmap <leader>vk :action CheckinProject<CR>
 nmap <leader>vz :action ChangesView.Revert<CR>
 nmap <leader>vh :action Vcs.ShowTabbedFileHistory<CR>
-nmap <leader>vb :action Annotate<CR>
+nmap <leader>vb :action Git.Branches<CR>
+nmap <leader>va :action Annotate<CR>
 
 "windows management
 nmap <leader><TAB> :action Switcher<CR>
