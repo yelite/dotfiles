@@ -27,13 +27,13 @@ nmap <leader>vb :action Git.Branches<CR>
 nmap <leader>va :action Annotate<CR>
 
 "windows management
-nmap <leader><TAB> :action Switcher<CR>
+nmap <leader><TAB> :action VimWindowNext<CR>
 nmap <leader>1 :action GoToTab1<CR>
 nmap <leader>2 :action GoToTab2<CR>
 nmap <leader>3 :action GoToTab3<CR>
 nmap <leader>4 :action GoToTab4<CR>
 
-nmap <leader>ww :action VimWindowNext<CR>
+nmap <leader>ww :action Switcher<CR>
 nmap <leader>wv :action VimWindowSplitVertical<CR>
 nmap <leader>w- :action VimWindowSplitHorizontal<CR>
 nmap <leader>wh :action VimWindowLeft<CR>
