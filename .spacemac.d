@@ -1,0 +1,1 @@
+/Users/yelite/.dotfiles/spacemacs.d
