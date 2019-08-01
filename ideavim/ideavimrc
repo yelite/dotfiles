@@ -7,6 +7,7 @@ set multiple-cursors
 set ideajoin
 set visualbell
 set scrolloff=5
+set clipboard+=ideaput
 
 nmap <C-Q> :action Back<CR>
 imap <C-Q> <C-O>:action Back<CR>
