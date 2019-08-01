@@ -15,7 +15,6 @@ nmap <C-W> :action Forward<CR>
 imap <C-W> <C-O>:action Forward<CR>
 
 map s :action EditorSelectWord<CR>
-map S :action EditorUnSelectWord<CR>
 
 let mapleader=" "
 
