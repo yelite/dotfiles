@@ -11,8 +11,11 @@ set clipboard+=ideaput
 
 nmap <C-Q> :action Back<CR>
 imap <C-Q> <C-O>:action Back<CR>
+vmap <C-Q> <ESC>:action Back<CR>
+
 nmap <C-W> :action Forward<CR>
 imap <C-W> <C-O>:action Forward<CR>
+vmap <C-W> <ESC>:action Forward<CR>
 
 map s :action EditorSelectWord<CR>
 
