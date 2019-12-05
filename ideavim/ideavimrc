@@ -41,10 +41,10 @@ nmap <leader>4 :action GoToTab4<CR>
 nmap <leader>ww :action Switcher<CR>
 nmap <leader>wv :action VimWindowSplitVertical<CR>
 nmap <leader>w- :action VimWindowSplitHorizontal<CR>
-nmap <leader>wh :action VimWindowLeft<CR>
-nmap <leader>wj :action VimWindowDown<CR>
-nmap <leader>wk :action VimWindowUp<CR>
-nmap <leader>wl :action VimWindowRight<CR>
+nmap <leader>wh :action PrevSplitter<CR>
+nmap <leader>wj :action PrevSplitter<CR>
+nmap <leader>wk :action NextSplitter<CR>
+nmap <leader>wl :action NextSplitter<CR>
 nmap <leader>wL :action MoveTabRight<CR>
 nmap <leader>wJ :action MoveTabDown<CR>
 nmap <leader>wp :action PinActiveTab<CR>
