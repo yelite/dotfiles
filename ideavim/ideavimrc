@@ -17,6 +17,9 @@ nmap <C-W> :action Forward<CR>
 imap <C-W> <C-O>:action Forward<CR>
 vmap <C-W> <ESC>:action Forward<CR>
 
+nmap [e :action GotoPreviousError<CR>
+nmap ]e :action GotoNextError<CR>
+
 map s :action EditorSelectWord<CR>
 
 let mapleader=" "
