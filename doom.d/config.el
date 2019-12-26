@@ -26,3 +26,7 @@
 ;;; org
 (after! org
   (setq +org-capture-todo-file "inbox.org"))
+
+;;; misc
+(after! flyspell
+  (setq ispell-dictionary "en_US"))
