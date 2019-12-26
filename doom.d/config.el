@@ -5,10 +5,11 @@
 (setq doom-theme 'doom-nord)
 (setq doom-font (font-spec :family "Menlo" :size 12 :weight 'regular))
 (setq line-spacing 0.2)
+(setq fill-column 90)
 
 ;; no line numbers
 (remove-hook! '(prog-mode-hook text-mode-hook conf-mode-hook)
-              #'display-line-numbers-mode)
+  #'display-line-numbers-mode)
 
 (push '(mac-transparent-titlebar . 1) default-frame-alist)
 (push '(mac-hide-document-icon . 1) default-frame-alist)
