@@ -3,8 +3,10 @@
 ;;; Theme and font
 
 (setq doom-theme 'doom-nord)
-(setq doom-font (font-spec :family "Menlo" :size 12 :weight 'regular))
-(setq line-spacing 0.2)
+(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'regular))
+(if (fboundp 'mac-auto-operator-composition-mode)
+    (mac-auto-operator-composition-mode))
+(setq-default line-spacing 0.2)
 (setq fill-column 90)
 
 ;; no line numbers
