@@ -7,6 +7,7 @@
 (if (fboundp 'mac-auto-operator-composition-mode)
     (mac-auto-operator-composition-mode))
 (setq-default line-spacing 0.2)
+(setq-default line-spacing-vertical-center 1)
 (setq fill-column 90)
 
 ;; no line numbers
