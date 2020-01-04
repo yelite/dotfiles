@@ -34,3 +34,5 @@
 ;;; misc
 (after! flyspell
   (setq ispell-dictionary "en_US"))
+
+(setq enable-dir-local-variables nil)
