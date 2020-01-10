@@ -33,6 +33,9 @@
   (setq auto-save-visited-interval 15)
   (add-hook! 'org-mode-hook #'auto-save-visited-mode))
 
+;;; rust
+(setq lsp-rust-server 'rust-analyzer)
+
 ;;; misc
 (after! flyspell
   (setq ispell-dictionary "en_US"))
