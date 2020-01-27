@@ -37,6 +37,9 @@
 (after! notmuch
   (setq +notmuch-sync-backend 'mbsync))
 
+;;; rust
+(setq lsp-rust-server 'rust-analyzer)
+
 ;;; misc
 (after! flyspell
   (setq ispell-dictionary "en_US"))
