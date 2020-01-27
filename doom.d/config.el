@@ -33,6 +33,10 @@
   (setq auto-save-visited-interval 15)
   (add-hook! 'org-mode-hook #'auto-save-visited-mode))
 
+;;; email
+(after! notmuch
+  (setq +notmuch-sync-backend 'mbsync))
+
 ;;; misc
 (after! flyspell
   (setq ispell-dictionary "en_US"))
