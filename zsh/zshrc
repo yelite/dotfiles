@@ -6,6 +6,8 @@ function antibody-reload() {
 
 fpath+=~/.zfunc
 
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
+export _ZL_DATA=~/.z
 source ~/.zsh_plugins.sh
 
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
