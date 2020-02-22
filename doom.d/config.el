@@ -37,6 +37,19 @@
 (after! notmuch
   (setq +notmuch-sync-backend 'mbsync))
 
+;;; latex
+(after! latex
+  (when (assoc "Skim" TeX-view-program-list)
+    (when-let
+        (app-path
+         (and IS-MAC
+              (file-exists-p! (or "/Applications/Skim.app"
+                                  "~/Applications/Skim.app"))))
+      (setf (cadr (assoc "Skim" TeX-view-program-list))
+            (format "%s/Contents/SharedSupport/displayline -r -b -g %%n %%o %%b"
+                    app-path)))))
+
+
 ;;; rust
 (setq lsp-rust-server 'rust-analyzer)
 
