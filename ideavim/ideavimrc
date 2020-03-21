@@ -3,6 +3,9 @@ source ~/.vimrc
 set surround
 set commentary
 set multiple-cursors
+set argtextobj
+set textobj-entire
+set ReplaceWithRegister
 
 set ideajoin
 set visualbell
