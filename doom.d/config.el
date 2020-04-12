@@ -10,12 +10,24 @@
 (setq-default line-spacing-vertical-center 1)
 (setq fill-column 90)
 
+; Workaround for sort: Args out of range
+; from https://github.com/seagle0128/doom-modeline/issues/232#issuecomment-544144235
+(setq internal-lisp-face-attributes
+  [nil
+   :family :foundry :swidth :height :weight :slant :underline :inverse
+   :foreground :background :stipple :overline :strike :box
+   :font :inherit :fontset :vector :extend])
+
 ;; no line numbers
 (remove-hook! '(prog-mode-hook text-mode-hook conf-mode-hook)
   #'display-line-numbers-mode)
 
+; For emacs-mac
 (push '(mac-transparent-titlebar . 1) default-frame-alist)
 (push '(mac-hide-document-icon . 1) default-frame-alist)
+
+; For emacs-plus
+(push '(ns-transparent-titlebar . t) default-frame-alist)
 
 ;;; Ivy
 
