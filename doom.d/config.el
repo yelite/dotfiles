@@ -28,10 +28,14 @@
 
 ; For emacs-plus
 (push '(ns-transparent-titlebar . t) default-frame-alist)
+(push '(ns-hide-document-icon . t) default-frame-alist)
+(push '(ns-appearance . dark) default-frame-alist)
 
 ;;; Ivy
 
 ;;; Evil
+
+(setq-default evil-kill-on-visual-paste nil)
 
 ;; Don't exit insert mode after typing 'jk'
 (after! evil-escape (evil-escape-mode -1))
