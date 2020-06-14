@@ -38,15 +38,15 @@ nmap <leader>vb :action Git.Branches<CR>
 nmap <leader>va :action Annotate<CR>
 
 "windows management
-nmap <leader><TAB> :action VimWindowNext<CR>
+nmap <leader><TAB> :action NextWindow<CR>
 nmap <leader>1 :action GoToTab1<CR>
 nmap <leader>2 :action GoToTab2<CR>
 nmap <leader>3 :action GoToTab3<CR>
 nmap <leader>4 :action GoToTab4<CR>
 
 nmap <leader>ww :action Switcher<CR>
-nmap <leader>wv :action VimWindowSplitVertical<CR>
-nmap <leader>w- :action VimWindowSplitHorizontal<CR>
+nmap <leader>wv :action SplitVertically<CR>
+nmap <leader>w- :action SplitHorizontally<CR>
 nmap <leader>wh :action PrevSplitter<CR>
 nmap <leader>wj :action PrevSplitter<CR>
 nmap <leader>wk :action NextSplitter<CR>
@@ -61,6 +61,8 @@ nmap <leader>wd :action VimWindowClose<CR>
 "special motions
 map <leader>[ :action EditorCodeBlockStart<CR>
 map <leader>] :action EditorCodeBlockEnd<CR>
+map [m :action MethodUp<CR>
+map ]m :action MethodDown<CR>
 
 "code intelligence
 nmap <leader>ii :action ImplementMethods<CR>
