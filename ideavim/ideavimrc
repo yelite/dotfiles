@@ -38,7 +38,7 @@ nmap <leader>vb :action Git.Branches<CR>
 nmap <leader>va :action Annotate<CR>
 
 "windows management
-nmap <leader><TAB> :action NextWindow<CR>
+nmap <leader><TAB> :action NextSplitter<CR>
 nmap <leader>1 :action GoToTab1<CR>
 nmap <leader>2 :action GoToTab2<CR>
 nmap <leader>3 :action GoToTab3<CR>
