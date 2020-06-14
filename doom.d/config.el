@@ -49,6 +49,9 @@
   (setq auto-save-visited-interval 15)
   (add-hook! 'org-mode-hook #'auto-save-visited-mode))
 
+(after! org-superstar
+  (setq org-superstar-headline-bullets-list '("◉" "○" "▷" "✸")))
+
 ;;; email
 (after! notmuch
   (setq +notmuch-sync-backend 'mbsync))
