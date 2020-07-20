@@ -46,6 +46,7 @@
 ;;; org
 (after! org
   (setq +org-capture-todo-file "inbox.org")
+  (setq +org-capture-notes-file "inbox.org")
   (setq auto-save-visited-interval 15)
   (add-hook! 'org-mode-hook #'auto-save-visited-mode))
 
