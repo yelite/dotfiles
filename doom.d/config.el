@@ -52,6 +52,9 @@
 (after! org-superstar
   (setq org-superstar-headline-bullets-list '("◉" "○" "▷" "✸")))
 
+(after! org-roam
+  (setq org-roam-directory org-directory))
+
 ;;; email
 (after! notmuch
   (setq +notmuch-sync-backend 'mbsync))
@@ -70,7 +73,7 @@
 
 
 ;;; rust
-(setq lsp-rust-server 'rust-analyzer)
+(setq rustic-lsp-server 'rust-analyzer)
 
 ;;; misc
 (after! flyspell
