@@ -48,13 +48,21 @@
   (setq +org-capture-todo-file "inbox.org")
   (setq +org-capture-notes-file "inbox.org")
   (setq auto-save-visited-interval 15)
-  (add-hook! 'org-mode-hook #'auto-save-visited-mode))
+  (setq org-todo-keywords '((sequence "TODO(t)" "PROJ(p)" "STRT(s)" "WAIT(w@/!)" "HOLD(h@/!)" "|" "DONE(d!)" "KILL(k!)")
+                           (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")))
+  (add-hook! 'org-mode-hook #'auto-save-visited-mode)
+  (add-hook! 'org-mode-hook #'org-mode-set-fill-column))
+
+(defun org-mode-set-fill-column ()
+  (auto-fill-mode t)
+  (setq-local fill-column 100))
 
 (after! org-superstar
   (setq org-superstar-headline-bullets-list '("◉" "○" "▷" "✸")))
 
 (after! org-roam
-  (setq org-roam-directory org-directory))
+  (setq org-roam-directory org-directory)
+  (setq org-roam-db-location "~/org-roam.db"))
 
 ;;; email
 (after! notmuch
