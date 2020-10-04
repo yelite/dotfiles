@@ -10,6 +10,8 @@
 (setq-default line-spacing-vertical-center 1)
 (setq fill-column 90)
 
+(setq mouse-wheel-scroll-amount '(1))
+
 ; Workaround for sort: Args out of range
 ; from https://github.com/seagle0128/doom-modeline/issues/232#issuecomment-544144235
 (setq internal-lisp-face-attributes
