@@ -12,7 +12,7 @@ function install_dot_file {
 }
 
 install_dot_file "vim/vimrc" ".vimrc"
-install_dot_file "vim/vimrc" ".config/nvim/init.vim"
+install_dot_file "vim/neovim-init.vim" ".config/nvim/init.vim"
 install_dot_file "zsh/zshrc" ".zshrc"
 install_dot_file "ideavim/ideavimrc" ".ideavimrc"
 install_dot_file "doom.d" ".doom.d"
